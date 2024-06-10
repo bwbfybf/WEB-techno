@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Випадаюче меню</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #21213d; 
+    }
+
+    nav {
+        display: flex; 
+        justify-content: center; 
+    }
+
+    header {
+        background-color: #21213d;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center; 
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        color: #fff;
+        width: auto;
+        padding: 10px 20px;
+        text-decoration: none;
+        position: relative;
+        font-weight: bold;
+    }
+
+
+    nav ul li::after {
+        content: '';
+        position: absolute;
+        width: 20%; 
+        height: 4px;
+        background-color: red;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); 
+        transition: width 0.3s ease, transform 0.3s ease; 
+    }
+
+    nav ul li:hover::after {
+        width: 80%; 
+        transform: translateX(-50%) scaleX(1.2); 
+    }
+
+    
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        padding: 0;
+        left: 0;
+    }
+
+    nav ul ul li {
+        display: block;
+    }
+
+    nav ul ul li a {
+        padding: 10px 20px;
+        display: block;
+    }
+
+
+    @media only screen and (max-width: 480px) {
+        nav ul {
+            display: block;
+        }
+        nav ul li {
+            display: block;
+            width: 100%;
+        }
+        nav ul ul {
+            position: static;
+            background-color: transparent;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li>
+                <a href="#">SHORTCODES &#9660;</a>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PAGES &#9660;</a>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li>
+                <a href="#">MEGAMENU &#9660;</a>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+</body>
+</html>

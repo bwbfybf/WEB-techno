@@ -1,0 +1,23 @@
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 3px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.last-month{
+    background-color: rgb(109, 109, 109);
+}
+
+.weekend {
+    background-color: #f0e68c;
+}

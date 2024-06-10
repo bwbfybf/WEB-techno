@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: block;
+    position: static;
+}
+
+header{
+    background-color: blue;
+    width: auto;
+    height: 17vh;
+}
+
+.container{
+    display: flex;
+}
+
+.left-sidebar{
+    background-color: gold;
+    width: 40vw;
+    height: 495px;
+    transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;
+}
+
+.right-sidebar{
+    background-color: gold;
+    width: 40vw;
+    height: auto;
+    transition: width 1s cubic-bezier(0, 0, 1, 1) 500ms;
+}
+
+.right-sidebar:hover {
+    width: 230px;
+}
+
+.left-sidebar:hover {
+    width: 230px;
+}
+
+footer{
+    background-color: blue;
+    width: auto;
+    height: 17vh;
+}
+
+

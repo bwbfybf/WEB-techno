@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper{
+    padding: 0px 20px 0px 20px;
+    min-height: 100%;
+
+}
+
+
+.header{
+    background-color: blue;
+    width: 100%;
+    height: 20vh;
+    padding-top: 20px;
+}
+
+table{
+    border-spacing: 0;
+}
+
+.main-tr{
+    display: flex;
+}
+
+.left-sidebar{
+    background-color: gold;
+    height: auto;
+    width: 30vw;   
+}
+
+.right-sidebar{
+    background-color: gold;
+    height: auto;
+    width: 30vw;
+}
+
+.footer{
+    background-color: blue;
+    width: auto;
+    height: 21vh;
+}
+
+.left-sidebar:hover{
+    background-color: blue;
+    transition: background 2s ease;
+}
+
+.right-sidebar:hover{
+    background-color: blue;
+    transition: background 2s ease;
+}
+
+p:hover{
+    background-color: black;
+    color: chocolate;
+    transition: background 0.5s ease;
+    transition: color 1s ease;
+}

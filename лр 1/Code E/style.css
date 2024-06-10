@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: gold;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-banner {
+    height: 45%;
+    width: 30%;
+    margin-left: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.main-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 85%
+}
+
+.left-sidebar{
+    background-color: blue;
+    width: 15%;
+    height: 525px;
+
+}
+
+.red-banner{
+    width: 85%;
+    height: 15%;
+    background-color: red;
+}
+
+.text{
+    width: 56%;
+    height: 75%;
+    padding-left: 7px;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+ul{
+    list-style: circle;
+    padding-left: 20px;
+}
+
+.right-sidebar{
+    width: 40%;
+    height: 75%;
+    background-color: blue
+}
+
+footer{
+    background-color: gold;
+    width: 100%;
+    height: 15vh;
+}
+
+.red-banner:hover{
+    scale: 50%;
+}
+
+.left-sidebar:hover{
+    background-color:gold;
+    transition: background 2s ease;
+}
+
+.right-sidebar:hover{
+    background-color:gold;
+    transition: background 2s ease;
+}
+
+p:hover{
+    background-color: black;
+    color: chocolate;
+    transition: background 0.5s ease;
+    transition: color 1s ease;
+}

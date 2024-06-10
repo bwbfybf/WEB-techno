@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Pair Splitter</title>
+</head>
+<body>
+
+<button onclick="splitString()">Розділити рядок</button>
+
+<div id="result"></div>
+
+<script>
+function splitStringIntoPairs(str) {
+    let result = [];
+    for (let i = 0; i < str.length; i += 2) {
+        if (i + 1 < str.length) {
+            result.push(str.substring(i, i + 2));
+        } else {
+            result.push(str.substring(i) + "_");
+        }
+    }
+    return result;
+}
+
+function splitString() {
+    let input = document.createElement('input');
+    input.type = 'Текст';
+    input.placeholder = 'Введіть дані:';
+    document.body.appendChild(input);
+
+    let button = document.createElement('button');
+    button.textContent = 'Розділити';
+    button.onclick = function() {
+        let str = input.value;
+        let result = splitStringIntoPairs(str);
+
+        let list = document.createElement('ul');
+        for (let pair of result) {
+            let li = document.createElement('li');
+            li.textContent = pair;
+            list.appendChild(li);
+        }
+
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('result').appendChild(list);
+
+        document.body.removeChild(input);
+        document.body.removeChild(button);
+    };
+    document.body.appendChild(button);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1100" height="700" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+const rect = {
+  x: 0,
+  y: 0,
+  width: 50,
+  height: 50,
+  speed: 2,
+  dx: 1,
+  dy: 1
+};
+
+function drawRect() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+}
+
+function moveRect() {
+  if (rect.x + rect.width >= canvas.width || rect.x <= 0) {
+    rect.dx *= -1;
+  }
+  if (rect.y + rect.height >= canvas.height || rect.y <= 0) {
+    rect.dy *= -1;
+  }
+
+  rect.x += rect.dx * rect.speed;
+  rect.y += rect.dy * rect.speed;
+}
+
+function updateCanvas() {
+  moveRect();
+  drawRect();
+  requestAnimationFrame(updateCanvas);
+}
+
+canvas.addEventListener('mouseover', (e) => {
+  rect.speed = 0;
+});
+
+canvas.addEventListener('mouseout', (e) => {
+  rect.speed = 2;
+});
+
+updateCanvas();
+</script>
+
+</body>
+</html>
